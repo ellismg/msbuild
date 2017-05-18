@@ -196,10 +196,10 @@ class Layout {
     static [Layout] FromCPVSDrop([string] $root) {
 
         $layout = [Layout]::new(
-            (CombineAndNormalize @($root, "bin\x86\Windows_NT\Release\Output")),
-            (CombineAndNormalize @($root, "bin\x64\Windows_NT\Release\Output")),
-            (CombineAndNormalize @($root, "bin\Release\Output")),
-            (CombineAndNormalize @($root, "bin\Release-NetCore\Output")),
+            (CombineAndNormalize @($root, "bin\Release\x86\Windows_NT\Output")),
+            (CombineAndNormalize @($root, "bin\Release\x64\Windows_NT\Output")),
+            (CombineAndNormalize @($root, "bin\Release\AnyCPU\Windows_NT\Output")),
+            (CombineAndNormalize @($root, "bin\Release-NetCore\AnyCPU\Windows_NT\Output")),
             (CombineAndNormalize @($root, "bin\Packages")),
             (CombineAndNormalize @($root, "pkg")))
 
